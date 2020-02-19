@@ -48,6 +48,9 @@
                 <li>
                     <a href="<?php echo $_SESSION['home'] ?>admin/salir" title="Salir">Salir</a>
                 </li>
+                <li>
+                    <a href="http://35.180.254.5/aaaProyectoPacman/unity/index.html" title="jugarUnity">JUEGO</a>
+                </li>
             </ul>
 
         <?php } ?>
