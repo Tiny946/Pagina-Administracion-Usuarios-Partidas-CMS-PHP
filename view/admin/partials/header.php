@@ -13,7 +13,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" type="text/css" href="<?php echo $_SESSION['public'] ?>css/admin.css">
 
+    <style>
+        nav .badge{
+            position: absolute;
+            top: 20px;
+            right: 375px;
+        }
 
+        toast-text-color: white;
+    </style>
 </head>
 
 <body>
@@ -33,30 +41,36 @@
             <!--Menú de navegación-->
             <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li>
-                    <a href="<?php echo $_SESSION['home'] ?>admin" title="Inicio">Inicio</a>
+                    <a href="#" class="waves-effect waves-light btn-floating grey darken-4 z-depth-0 btn" onclick="M.toast({html: 'Falta la funcionalidad', classes: 'grey lighten-1 rounded'})">
+                        <i class="material-icons medium">notifications</i>
+                    </a>
+                </li>
+                <li><span class="badge black-text yellow new">1</span></li>
+                <li>
+                    <a href="<?php echo $_SESSION['home'] ?>admin" title="Inicio"><i class="material-icons medium">home</i></a>
                 </li>
                 <?php if ($_SESSION['partidas'] == 1){ ?>
                     <li>
-                        <a href="<?php echo $_SESSION['home'] ?>admin/noticias" title="Noticias">Partidas</a>
+                        <a href="<?php echo $_SESSION['home'] ?>admin/noticias" title="Partidas"><i class="material-icons right">event_note</i></a>
                     </li>
                 <?php } ?>
                 <?php if ($_SESSION['usuarios'] == 1){ ?>
                     <li>
-                        <a href="<?php echo $_SESSION['home'] ?>admin/usuarios" title="Usuarios">Usuarios</a>
+                        <a href="<?php echo $_SESSION['home'] ?>admin/usuarios" title="Usuarios"><i class="material-icons right">group</i></a>
                     </li>
                 <?php } ?>
                 <li>
-                    <a href="<?php echo $_SESSION['home'] ?>admin/salir" title="Salir">Salir</a>
+                    <a href="<?php echo $_SESSION['home'] ?>admin/salir" title="Salir"><i class="material-icons medium">exit_to_app</i></a>
                 </li>
                 <li>
-                    <a href="http://35.180.254.5/aaaProyectoPacman/unity/index.html" title="jugarUnity">JUEGO</a>
+                    <a href="http://35.180.254.5/aaaProyectoPacman/unity/index.html" title="Jugar"><i class="material-icons right">videogame_asset</i></a>
                 </li>
             </ul>
-
         <?php } ?>
 
     </div>
 </nav>
+
 
 <?php if (isset($_SESSION['usuario'])){ ?>
 

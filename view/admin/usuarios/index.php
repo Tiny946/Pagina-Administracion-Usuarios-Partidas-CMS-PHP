@@ -3,29 +3,33 @@
 </h3>
 <div class="row">
     <!--Nuevo-->
-    <article class="col s12 l6">
+    <article class="col s12 l2">
         <div class="card horizontal admin">
             <div class="card-stacked">
                 <div class="card-content">
-                    <i class="grey-text material-icons medium">person</i>
-                    <h4 class="grey-text">
+                    <i class="grey-text material-icons medium" style="margin-left: 30%">person</i>
+                    <h4 class="grey-text center-align">
                         nuevo usuario
-                    </h4><br><br>
+                    </h4>
+                    <hr>
+                    <a style="margin-left: 40%" href="<?php echo $_SESSION['home']."admin/usuarios/crear" ?>" title="Añadir nuevo usuario"><i class="material-icons small">add_circle_outline</i></a>
                 </div>
-                <div class="card-action">
-                    <a href="<?php echo $_SESSION['home']."admin/usuarios/crear" ?>" title="Añadir nuevo usuario">
-                        <i class="material-icons">add_circle</i>
-                    </a>
-                </div>
+<!--                <div class="card-action">-->
+<!--                    <a href="--><?php //echo $_SESSION['home']."admin/usuarios/crear" ?><!--" title="Añadir nuevo usuario">-->
+<!--                        <i class="material-icons">add_circle</i>-->
+<!--                    </a>-->
+<!--                </div>-->
             </div>
         </div>
     </article>
     <?php foreach ($datos as $row){ ?>
-        <article class="col s12 l6">
+        <article class="col s12 l3">
             <div class="card horizontal  sticky-action admin">
                 <div class="card-stacked">
                     <div class="card-content">
-                        <i class="material-icons medium">person</i>
+<!--                        <i class="material-icons medium">account_circle</i>-->
+                        <img style="margin: 0; margin-left: 3%" src="<?php echo $_SESSION['public']."img/avatar.gif"?>">
+                        <br>
                         <h4>
                             <?php echo $row->usuario ?>
                         </h4>
@@ -43,7 +47,7 @@
                             <i class="<?php echo $color ?> material-icons"><?php echo $icono ?></i>
                         </a>
                         <a href="#" class="activator" title="Borrar">
-                            <i class="material-icons">delete</i>
+                            <i class="material-icons">delete_forever</i>
                         </a>
                     </div>
                 </div>

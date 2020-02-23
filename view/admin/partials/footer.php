@@ -1,10 +1,10 @@
 </section>
 </main>
 <footer class="center-align">
-    © <?php echo date("Y") ?> Panel de Administración.
     <a href="https://jairogarciarincon.com" target="_blank" title="Alberto Pérez Regalado">
         Alberto Pérez Regalado
     </a>
+    <i class="material-icons tiny">copyright</i>
 </footer>
 
 

@@ -21,42 +21,45 @@
 <!--        </div>-->
 <!--    </article>-->
     <?php foreach ($datos as $row){ ?>
-        <article class="col s12 l6">
+        <article class="col s12 l3">
             <div class="card horizontal  sticky-action admin">
                 <div class="card-stacked">
-                    <?php if ($row->imagen){ ?>
-                        <div class="card-image">
-                            <img src="<?php echo $_SESSION['public']."img/".$row->imagen ?>" alt="<?php echo $row->titulo ?>">
-                        </div>
-                    <?php } ?>
+<!--                    --><?php //if ($row->imagen){ ?>
+<!--                        <div class="card-image">-->
+<!--                            <img src="--><?php //echo $_SESSION['public']."img/".$row->imagen ?><!--" alt="--><?php //echo $row->titulo ?><!--">-->
+<!--                        </div>-->
+<!--                    --><?php //} ?>
+
                     <div class="card-content">
-                        <?php if (!$row->imagen){ ?>
-                            <i class="grey-text material-icons medium">image</i>
-                        <?php } ?>
-                        <h4>
-                            <?php echo $row->titulo ?>
-                        </h4>
+<!--                        --><?php //if (!$row->imagen){ ?>
+<!--                            <i class="grey-text material-icons medium">image</i>-->
+<!--                        --><?php //} ?>
+<!--                        <h4>-->
+<!--                            --><?php //echo $row->titulo ?>
+<!--                        </h4>-->
+                        <i class="material-icons medium">gamepad</i>
+                        <br>
                         <strong>Puntuación:</strong> <?php echo $row->puntuacion ?><br>
                         <strong>Duración:</strong> <?php echo $row->duracion ?><br>
                         <strong>Fecha:</strong> <?php echo date("d/m/Y", strtotime($row->fecha)) ?>
                     </div>
                     <div class="card-action">
-                        <a href="<?php echo $_SESSION['home']."admin/noticias/editar/".$row->id ?>" title="Editar">
-                            <i class="material-icons">edit</i>
-                        </a>
+<!--                        <a href="--><?php //echo $_SESSION['home']."admin/noticias/editar/".$row->id ?><!--" title="Editar">-->
+<!--                            <i class="material-icons">edit</i>-->
+<!--                        </a>-->
                         <?php $title = ($row->activa == 1) ? "Desactivar" : "Activar" ?>
                         <?php $color = ($row->activa == 1) ? "green-text" : "red-text" ?>
                         <?php $icono = ($row->activa == 1) ? "mood" : "mood_bad" ?>
                         <a href="<?php echo $_SESSION['home']."admin/noticias/activar/".$row->id ?>" title="<?php echo $title ?>">
                             <i class="<?php echo $color ?> material-icons"><?php echo $icono ?></i>
                         </a>
-                        <?php $title = ($row->home == 1) ? "Quitar de la home" : "Mostrar en la home" ?>
-                        <?php $color = ($row->home == 1) ? "green-text" : "red-text" ?>
-                        <a href="<?php echo $_SESSION['home']."admin/noticias/home/".$row->id ?>" title="<?php echo $title ?>">
-                            <i class="<?php echo $color ?> material-icons">home</i>
-                        </a>
+<!--                        --><?php //$title = ($row->home == 1) ? "Quitar de la home" : "Mostrar en la home" ?>
+<!--                        --><?php //$color = ($row->home == 1) ? "green-text" : "red-text" ?>
+<!--                        <a href="--><?php //echo $_SESSION['home']."admin/noticias/home/".$row->id ?><!--" title="--><?php //echo $title ?><!--">-->
+<!--                            <i class="--><?php //echo $color ?><!-- material-icons">home</i>-->
+<!--                        </a>-->
                         <a href="#" class="activator" title="Borrar">
-                            <i class="material-icons">delete</i>
+                            <i class="material-icons">delete_forever</i>
                         </a>
                     </div>
                 </div>
